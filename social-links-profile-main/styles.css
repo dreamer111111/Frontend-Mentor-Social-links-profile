@@ -1,0 +1,126 @@
+/* Global Variables */
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --fs-body: 14px;
+  --fs-title: 24px;
+}
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Fonts */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Body styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--grey-900);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+/* Card styles */
+.card {
+  width: 100%;
+  max-width: 384px;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+/* Hero section styles */
+.hero-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+.hero-title {
+  font-size: var(--fs-title);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.hero-subtitle {
+  color: var(--green);
+  font-size: var(--fs-body);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.hero-description {
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+/* Social links styles and hovers */
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.social-link {
+  display: block;
+  background-color: var(--grey-700);
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+/* Hover and Active styles */
+@media (hover: hover) {
+  .social-link:hover {
+    background-color: var(--green);
+    color: var(--grey-900);
+    cursor: pointer;
+  }
+}
+.social-link:active {
+  background-color: var(--green);
+  color: var(--grey-900);
+  transform: scale(0.96);
+}
+.social-link:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+  background-color: var(--green);
+  color: var(--grey-900);
+}
+/* Responsives styles */
+@media (min-width: 600px) {
+  .card {
+    padding: 40px;
+  }
+}
